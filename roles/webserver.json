@@ -1,0 +1,19 @@
+{
+  "name": "webserver",
+  "description": "Role for role cookbook demo-cookbook::webserver",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[demo-cookbook::webserver]"
+  ],
+  "env_run_lists": {
+
+  }
+}
+

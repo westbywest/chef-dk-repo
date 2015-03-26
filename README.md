@@ -1,8 +1,9 @@
 Overview
 ========
-This is a demonstation repo created from Chef Development Kit using "chef generate repo" command.  Specifically, this repo was put together to demonstate using Chef-DK with chef-zero for standalone deployment w/o an actual Chef server.
+This repo was put together to demonstate using Chef-DK with chef-provisioning and chef-zero for standalone deployment w/o an actual Chef server.
 
-Every Chef installation needs a Chef Repository. This is the place where cookbooks, roles, config files and other artifacts for managing systems with Chef will live. We strongly recommend storing this repository in a version control system such as Git and treat it like source code.
+Every Chef installation needs a Chef Repository. This is the place where cookbooks, roles, config files and other artifacts for managing systems with 
+Chef will live. We strongly recommend storing this repository in a version control system such as Git and treat it like source code.
 
 CAVEAT: This repo hasn't been tested for fitness, so it may empty your fridge of all food and thereafter harass a kitten.
 
@@ -29,7 +30,21 @@ bundle install
 berks vendor
 ```
 
-Fifth, TBD.
+Fifth, TBD, but you're probably on your own from here to sort out how nodes are bootstrapped, depending on whether you use AWS, XenServer, bare 
+metal, etc.  chef-provisioning support several environments.  Also, example kickstart files are provided under ./kickstart.  Additionally, you will 
+need to put a private RSA key at ./chef/chef_user.pem, corresponding to a sudo-capable "chef" user already baked into your machines.  Likewise, that 
+user's public RSA key will also need to be in the data_bags/users/chef.json item.
+
+Sixth, update/add custom cookbooks, roles, environments, and data bags.
+
+Seventh, and again depending on where your machines live (AWS, XenServer, bare metal), launch chef-zero to provision nodes.
+```
+chef-client -z machines/frontend.rb
+```
+
+TODO:
+* encrypted data bags
+* search by node name inside recipes
 
 Repository Directories
 ======================
@@ -40,7 +55,10 @@ This repository contains several directories, and each directory contains a READ
 * `config/` - Contains the Rake configuration file, `rake.rb`.
 * `cookbooks/` - Cookbooks you download or create.
 * `data_bags/` - Store data bags and items in .json in the repository.
-* `roles/` - Store roles in .rb or .json in the repository.
+* `environments/` - Store environments in .json in the repository.
+* `kickstart/` - Demostation Kickstart files.
+* `machines/` - Store machine definitions in .rb, to be used by chef-zero.
+* `roles/` - Store roles in .json in the repository.  Note that roles in .rb don't appear to work with chef-zero.
 
 Rake Tasks
 ==========
