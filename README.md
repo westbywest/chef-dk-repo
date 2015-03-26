@@ -1,9 +1,10 @@
 Overview
 ========
-
-This is a demonstation repo created from Chef Development Kit using "chef generate repo" command.  It hasn't been tested, so it may empty your fridge of all food and thereafter harass a kitten.
+This is a demonstation repo created from Chef Development Kit using "chef generate repo" command.  Specifically, this repo was put together to demonstate using Chef-DK with chef-zero for standalone deployment w/o an actual Chef server.
 
 Every Chef installation needs a Chef Repository. This is the place where cookbooks, roles, config files and other artifacts for managing systems with Chef will live. We strongly recommend storing this repository in a version control system such as Git and treat it like source code.
+
+CAVEAT: This repo hasn't been tested for fitness, so it may empty your fridge of all food and thereafter harass a kitten.
 
 Installation
 ============

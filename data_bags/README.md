@@ -1,6 +1,8 @@
 Data Bags
 ---------
 
+Chef-DK / chef-zero note: A couple user data bags are provided for demonstation purposes.  One for a login named "fred" and another "chef" for the chef-agent to run under.  Both users are assumed to only use key-based SSH authentication, and both are given "wheel" group membership for sudo privileges.
+
 This directory contains directories of the various data bags you create for your infrastructure. Each subdirectory corresponds to a data bag on the Chef Server, and contains JSON files of the items that go in the bag.
 
 First, create a directory for the data bag.
@@ -24,7 +26,6 @@ Next, create the data bag on the Chef Server.
 Then upload the items in the data bag's directory to the Chef Server.
 
     knife data bag from file BAG ITEM.json
-
 
 Encrypted Data Bags
 -------------------

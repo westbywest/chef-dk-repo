@@ -1,0 +1,44 @@
+{
+  "name": "production",
+  "description": "CentOS 6 production environment",
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": "7",
+      "set_etc_environment": true,
+      "jdk": {
+        "7": {
+          "x86_64": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/7u21-b11/jdk-7u21-linux-x64.tar.gz",
+            "checksum": "390700b531491ab51c00432517ac8739b7a61c9817fcde3650aa6dbd9b21c056"
+          }
+        }
+      },
+      "oracle": {
+        "accept_oracle_download_terms": true
+      }
+    },
+    "postgresql": {
+      "enable_pgdg_yum": true,
+      "version": "9.1",
+      "repo_rpm_url": "http://yum.postgresql.org/9.1/redhat/rhel-6-x86_64/",
+      "password": {
+        "postgres": "md5a3908081cc75689975cc9f2b87bd6aea"
+      },
+      "config": {
+        "port": "5432"
+      }
+    },
+    "tomcat-all": {
+      "user": "tomcat",
+      "group": "tomcat",
+      "version": "7.0.53",
+      "install_directory": "/opt",
+      "java_opts": "-Xmx1024m -XX:MaxPermSize=384m"
+    }
+  },
+  "override_attributes": {
+  }
+}

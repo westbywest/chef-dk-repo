@@ -1,0 +1,6 @@
+{
+    "id": "chef",
+    "comment": "Chef Ops User",
+    "groups": "wheel",
+    "ssh_keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvTdzLIoEjDa8Z39BTe3m+IpPTOrXapXHMjiO0ipmJq6RjnZ1NEulndG/kKP95WkZVBLJA27dXd7kbRxRA756FqAE8I0WNTdQvBrrSj8utOFQ/KyrkuHlSRGZVoQUth/pQDhWDjYWppLNqRTwNuvOpeqKe5jbS5TiuYVQpXIByouDT7xOtl/QL8wWCbRNboMYgkUV0chdb1xJQ8BqAld1qrKk3O8LTevyy+gIGup8wew5BTtFdCZ4jaowshB2nBE8dZtb55a3a7hiW8/6SIEFilEoMAXUMCXCRIRU6Vyona8tRCq2VbJy9oqIBwPOaDjVttCuVtsSN866twsS3MWJoQ== chef@localhost"]
+}

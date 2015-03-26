@@ -1,0 +1,6 @@
+{
+    "id": "fred",
+    "comment": "Dr. Fred Fictitious MacFreddy VI",
+    "groups": "wheel",
+    "ssh_keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChbmymD+59oXnG9I+7V43d/+xDt2jBufe72RUPFKXiWc+/JAnKYnhddoZBuwd074W0lIshF0yn1iix4BWTIg8YDckEEBkbs2UrPq2swDpZaKWr1rJCTBbZIFxHSqqq0aOKqhOMLdwOXNqUJP5gcmjCTujWmu6iTEZNOsbCUnvH8UcjYhoxj5tROcuSM/KiBkGxmkbg4JbQyH6XkPWq3Vbj/QDchuK+3UynZNFvvyVovDGUTdrHQCnbzukcGf1YkUoRKl6/wyBM2np8ES0IPEPKwPlEPU4WpO6iXF3fc6oTlVX+MA2ynT/0a/R2EJmNfZJbfeGDbI6YHrU37MPnKQAT fred@MBP"]
+}
