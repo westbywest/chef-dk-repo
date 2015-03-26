@@ -1,0 +1,19 @@
+.rake_test_cache
+
+###
+# Ignore Chef key files and secrets
+###
+.chef/*.pem
+.chef/*.pub
+.chef/encrypted_data_bag_secret
+
+###
+# Ignore Gemfile and Berksfile locks
+###
+Gemfile.lock
+Berksfile.lock
+
+###
+# Ignore 3rd party cookbooks vendored via Berkshelf
+###
+berks-cookbooks
